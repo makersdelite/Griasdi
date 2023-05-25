@@ -16,7 +16,11 @@ namespace GriasdiWinFormApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainView());
+            var appContext = new GriasdiAppContext();
+            appContext.Build();
+            appContext.Perform();
+            Application.Run(appContext);
+           
         }
     }
 }
