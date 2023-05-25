@@ -1,5 +1,5 @@
 # GriasdiWinFormApp
-This is my conceptual idea of a MVVM based windows forms app: 
+This is my conceptual idea of a MVVM based windows forms app, that does not reflect the "official" way at all:
 
 - a form does not consist of any custom code behind except automatically generated one by Visual Studio
 - a form reference is stored in a custom view object that is defined in a ViewBase class
