@@ -1,6 +1,6 @@
-﻿namespace GriasdiWinFormApp
+﻿namespace Griasdi.Mvvms.Views.NativeViews
 {
-    partial class MainView
+    partial class NativeViewBase
     {
         /// <summary>
         /// Required designer variable.

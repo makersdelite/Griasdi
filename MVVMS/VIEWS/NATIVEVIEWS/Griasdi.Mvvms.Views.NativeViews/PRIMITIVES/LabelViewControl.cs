@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GriasdiWinFormApp
+namespace Griasdi.Mvvms.Views.NativeViews.PRIMITIVES
 {
-    public partial class MainView : Form
+    public partial class LabelViewControl : NativeViewControlBase
     {
-        public MainView()
+        public LabelViewControl()
         {
             InitializeComponent();
         }

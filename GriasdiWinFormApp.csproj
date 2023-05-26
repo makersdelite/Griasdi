@@ -47,17 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GriasdiAppContext.cs" />
-    <Compile Include="MainView.cs">
+    <Compile Include="MVVMS\VIEWS\NATIVEVIEWS\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainView.Designer.cs">
+    <Compile Include="MVVMS\VIEWS\NATIVEVIEWS\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="MVVMS\VIEWMODELS\GriasdiAppMainViewModel.cs" />
     <Compile Include="MVVMS\VIEWS\GriasdiAppMainView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainView.resx">
+    <EmbeddedResource Include="MVVMS\VIEWS\NATIVEVIEWS\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -106,6 +106,14 @@
     <ProjectReference Include="MVVMS\VIEWS\Griasdi.Mvvms.Views\Griasdi.Mvvms.Views.csproj">
       <Project>{39104d0d-f237-4c21-8e85-66e65dbf2408}</Project>
       <Name>Griasdi.Mvvms.Views</Name>
+    </ProjectReference>
+    <ProjectReference Include="MVVMS\VIEWS\NATIVEVIEWS\Griasdi.Mvvms.Views.NativeViews.EditViewControls\Griasdi.Mvvms.Views.NativeViews.EditViewControls.csproj">
+      <Project>{3526565e-68b7-4955-ad16-517a3efe9f51}</Project>
+      <Name>Griasdi.Mvvms.Views.NativeViews.EditViewControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="MVVMS\VIEWS\NATIVEVIEWS\Griasdi.Mvvms.Views.NativeViews\Griasdi.Mvvms.Views.NativeViews.csproj">
+      <Project>{CAE53D2C-2013-4F4C-B5EA-E73893B6C959}</Project>
+      <Name>Griasdi.Mvvms.Views.NativeViews</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,6 @@
 ﻿using Griasdi.Commons;
 using Griasdi.Events;
+using Griasdi.Mvvms.Views.NativeViews;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,13 +54,13 @@ namespace Griasdi.Mvvms.Views
 
 
 
-        public Form View { get; set; }
+        public NativeViewBase NativeView{ get; set; }
 
-        public virtual void SetView(Form view)
+        public virtual void SetView(NativeViewBase nativeView)
         {
-            this.View = view;
+            this.NativeView = nativeView;
 
-            if(this.View == null)
+            if(this.NativeView == null)
             {
                 return;
             }
@@ -68,8 +69,8 @@ namespace Griasdi.Mvvms.Views
 
         public override void RegisterEvents()
         {
-            this.View.FormClosed += View_FormClosed;
-            this.View.FormClosing += View_FormClosing;
+            this.NativeView.FormClosed += View_FormClosed;
+            this.NativeView.FormClosing += View_FormClosing;
         }
 
         private void View_FormClosing(object sender, FormClosingEventArgs e)
@@ -85,22 +86,22 @@ namespace Griasdi.Mvvms.Views
         public virtual void Show()
         {
             #region method exit strategy
-            if (this.View == null)
+            if (this.NativeView == null)
             {
                 return;
             }
             #endregion
-            this.View.Show();
+            this.NativeView.Show();
         }
         public virtual void Close()
         {
             #region method exit strategy
-            if (this.View == null)
+            if (this.NativeView == null)
             {
                 return;
             }
             #endregion
-            this.View.Close();
+            this.NativeView.Close();
         }
     }
 }
