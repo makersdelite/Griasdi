@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,6 +28,9 @@ namespace Griasdi.Mvvms.ViewModels.Factories
             {
                 case "SINGLE-LINE-EDIT-BOX":
                     retVal = new SingleLineEditBoxViewModel();
+                    break;
+                case "MULTI-LINE-EDIT-BOX":
+                    retVal = new MultiLineEditBoxViewModel();
                     break;
                 default:
                     break;

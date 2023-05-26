@@ -22,7 +22,6 @@ namespace Griasdi.Commons
             this.Uid = StringHelper.GetGuid();
         }
 
-
         public virtual void RegisterEvents()
         {
         }

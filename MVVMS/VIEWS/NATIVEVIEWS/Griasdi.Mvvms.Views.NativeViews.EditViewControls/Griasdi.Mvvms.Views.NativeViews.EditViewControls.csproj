@@ -58,6 +58,12 @@
     <Compile Include="EditBoxNativeViewControl.Designer.cs">
       <DependentUpon>EditBoxNativeViewControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="MultiLineEditBoxNativeViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MultiLineEditBoxNativeViewControl.Designer.cs">
+      <DependentUpon>MultiLineEditBoxNativeViewControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="SingleLineEditBoxNativeViewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditBoxNativeViewControl.resx">
       <DependentUpon>EditBoxNativeViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiLineEditBoxNativeViewControl.resx">
+      <DependentUpon>MultiLineEditBoxNativeViewControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SingleLineEditBoxNativeViewControl.resx">
       <DependentUpon>SingleLineEditBoxNativeViewControl.cs</DependentUpon>

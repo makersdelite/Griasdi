@@ -23,6 +23,5 @@ namespace Griasdi.Events
             this.EventArgsDictionary.Add(key, e);
         }
 
-        
     }
 }

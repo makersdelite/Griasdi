@@ -35,7 +35,7 @@ namespace GriasdiWinFormApp
             {
                 return;
             }
-            var window = MessageBox.Show("Do you want to quit application ?", "Decision.", MessageBoxButtons.YesNo);
+            var window = MessageBox.Show("Do you really want to quit application ?", "Decision", MessageBoxButtons.YesNo);
             if(window == DialogResult.No)
             {
                 ea.Cancel();
@@ -44,7 +44,6 @@ namespace GriasdiWinFormApp
 
         private void ViewModel_Closed(object sender, GriasdiEventArgs e)
         {
-            //tbd
             Application.Exit();
         }
         #endregion

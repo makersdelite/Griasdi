@@ -54,7 +54,6 @@ namespace Griasdi.Mvvms.ViewModels
 
         public ViewViewModelBase()
         {
-            this.RegisterEvents();
         }
         
         public override void RegisterEvents() 

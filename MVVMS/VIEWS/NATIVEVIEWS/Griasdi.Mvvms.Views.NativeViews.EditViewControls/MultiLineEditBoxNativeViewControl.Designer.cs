@@ -1,6 +1,6 @@
 ﻿namespace Griasdi.Mvvms.Views.NativeViews.EditViewControls
 {
-    partial class EditBoxNativeViewControl
+    partial class MultiLineEditBoxNativeViewControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,32 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // TextBox
-            // 
-            this.TextBox.Location = new System.Drawing.Point(0, 16);
-            this.TextBox.Multiline = true;
-            this.TextBox.Name = "TextBox";
-            this.TextBox.Size = new System.Drawing.Size(327, 22);
-            this.TextBox.TabIndex = 0;
-            // 
-            // EditBoxNativeViewControl
+            // MultiLineEditBoxNativeViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Controls.Add(this.TextBox);
-            this.Name = "EditBoxNativeViewControl";
-            this.Size = new System.Drawing.Size(327, 75);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Name = "MultiLineEditBoxNativeViewControl";
+            this.Size = new System.Drawing.Size(327, 70);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TextBox;
     }
 }

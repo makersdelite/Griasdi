@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Griasdi.Mvvms.Views.NativeViews.EditViewControls
 {
@@ -72,6 +73,34 @@ namespace Griasdi.Mvvms.Views.NativeViews.EditViewControls
         public string GetValue()
         {
             return this.TextBox.Text;
+        }
+
+        public virtual void SetMultiline(bool value)
+        {
+            var tb = this.TextBox;
+            tb.Multiline = value;
+
+            tb.ScrollBars = ScrollBars.Vertical;
+            tb.AcceptsReturn = true;
+            tb.AcceptsTab = true;
+            tb.WordWrap = true;
+        }
+
+        public override void SetHeight(int value)
+        {
+            base.SetHeight(value);
+            this.TextBox.Height = value;
+        }
+        public override void SetTop(int value)
+        {
+            base.SetTop(value);
+            this.TextBox.Top = 0;
+        }
+
+        public override void SetWidth(int value)
+        {
+            base.SetWidth(value);
+            this.TextBox.Width = value;
         }
     }
 }

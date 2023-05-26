@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="EditViewControlViewModel.cs" />
     <Compile Include="EditViewModelBase.cs" />
+    <Compile Include="PRIMITIVES\MultiLineEditBoxViewModel.cs" />
     <Compile Include="PRIMITIVES\SingleLineEditBoxViewModel.cs" />
     <Compile Include="PRIMITIVES\EditBoxViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

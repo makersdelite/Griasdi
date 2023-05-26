@@ -24,5 +24,22 @@ namespace Griasdi.Mvvms.Views.NativeViews
         public virtual void RegisterEvents()
         {
         }
+
+        public virtual void SetHeight(int value)
+        {
+            this.Height = value;
+        }
+        public virtual void SetWidth(int value)
+        {
+            this.Width = value;
+        }
+        public virtual void SetTop(int value) 
+        {
+            this.Top = value;
+        }
+        public virtual void SetLeft(int value) 
+        {
+            this.Left = value;
+        }
     }
 }

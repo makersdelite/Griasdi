@@ -20,9 +20,19 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
         public override void Build()
         {
 
+            var view = new GriasdiAppMainView();
+            view.Build();
+            this.SetView(view);
+            this.RegisterEvents();
+
+
             var sleb0 = ViewModelFactory.Get("SINGLE-LINE-EDIT-BOX") as EditBoxViewModel;
             sleb0.SetValue("Moinsen");
             this.Add(sleb0);
+
+            var mleb0 = ViewModelFactory.Get("MULTI-LINE-EDIT-BOX") as EditBoxViewModel;
+            mleb0.SetValue("'Moinsen' is an advanced northern german flavour to say 'hello'. It derives from 'Moin' resp. 'Moin Moin'. But keep in mind that natives simply identify people as chatty when they say 'Moin Moin'. (https://en.wikipedia.org/wiki/Moin)");
+            this.Add(mleb0);
 
 
             var sleb1 = ViewModelFactory.Get("SINGLE-LINE-EDIT-BOX") as EditBoxViewModel;
@@ -33,11 +43,15 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
             sleb2.SetValue("Hi");
             this.Add(sleb2);
 
-            var view = new GriasdiAppMainView();
-            view.Build();
-            this.SetView(view);
+
+
+
 
             //temp render section
+            if (this.Children == null)
+            {
+                return;
+            }
             var vmTopOffset = 200;
             var vmRunningTop = vmTopOffset;
             foreach (var childVm in this.Children)
@@ -50,13 +64,23 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
 
                 var vx = vm.View as ViewControlBase;
                 var vxNative = vx.NativeViewControl;
-                vxNative.Top = vmRunningTop;
+                vxNative.SetTop(vmRunningTop);
                 vxNative.Left = 10;
-                vxNative.Width = 300;
-                vxNative.Height = 25;
+                vxNative.SetWidth(300);
+
+
+                if (vm is MultiLineEditBoxViewModel)
+                {
+                    vxNative.SetHeight(125);
+                }
+                else
+                {
+                    vxNative.Height = 22;
+                }
+                
                 view.NativeView.Controls.Add(vxNative);
 
-                vmRunningTop += vxNative.Height;
+                vmRunningTop += vxNative.Height + 5;
             }
             
 
