@@ -12,7 +12,6 @@ namespace Griasdi.Mvvms.Views
 {
     public class ViewBase:GriasdiBase
     {
-
         #region event section
         #region close
         public event EventHandler<GriasdiEventArgs> Closed;
@@ -31,7 +30,6 @@ namespace Griasdi.Mvvms.Views
             this.OnClosed(ea);
         }
         #endregion
-
         #region closing
         public event EventHandler<GriasdiEventArgs> Closing;
         public void OnClosing(GriasdiEventArgs e)
@@ -49,7 +47,6 @@ namespace Griasdi.Mvvms.Views
             this.OnClosing(ea);
         }
         #endregion
-
         #endregion
 
 

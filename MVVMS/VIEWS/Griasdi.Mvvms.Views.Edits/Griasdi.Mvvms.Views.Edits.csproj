@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39104D0D-F237-4C21-8E85-66E65DBF2408}</ProjectGuid>
+    <ProjectGuid>{3581BD08-2772-46DC-B2C0-82FCCC0F47B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Griasdi.Mvvms.Views</RootNamespace>
-    <AssemblyName>Griasdi.Mvvms.Views</AssemblyName>
+    <RootNamespace>Griasdi.Mvvms.Views.Edits</RootNamespace>
+    <AssemblyName>Griasdi.Mvvms.Views.Edits</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ViewControlBase.cs" />
-    <Compile Include="ViewBase.cs" />
+    <Compile Include="EditViewControl.cs" />
+    <Compile Include="PRIMITIVES\EditBoxViewControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,9 +50,13 @@
       <Project>{cabbd549-d234-451c-946c-5a4a5990d61a}</Project>
       <Name>Griasdi.Commons</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\EVENTS\Griasdi.Events\Griasdi.Events.csproj">
-      <Project>{12dff439-ee6a-4626-a187-ecb985392ed9}</Project>
-      <Name>Griasdi.Events</Name>
+    <ProjectReference Include="..\Griasdi.Mvvms.Views\Griasdi.Mvvms.Views.csproj">
+      <Project>{39104d0d-f237-4c21-8e85-66e65dbf2408}</Project>
+      <Name>Griasdi.Mvvms.Views</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NATIVEVIEWS\Griasdi.Mvvms.Views.NativeViews.EditViewControls\Griasdi.Mvvms.Views.NativeViews.EditViewControls.csproj">
+      <Project>{3526565e-68b7-4955-ad16-517a3efe9f51}</Project>
+      <Name>Griasdi.Mvvms.Views.NativeViews.EditViewControls</Name>
     </ProjectReference>
     <ProjectReference Include="..\NATIVEVIEWS\Griasdi.Mvvms.Views.NativeViews\Griasdi.Mvvms.Views.NativeViews.csproj">
       <Project>{cae53d2c-2013-4f4c-b5ea-e73893b6c959}</Project>
