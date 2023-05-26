@@ -99,6 +99,14 @@
       <Project>{27946bff-64cb-4d96-aa24-5c8218dc6b9b}</Project>
       <Name>Griasdi.Helpers.StringHelpers</Name>
     </ProjectReference>
+    <ProjectReference Include="MVVMS\VIEWMODELS\Griasdi.Mvvms.ViewModels.Edits\Griasdi.Mvvms.ViewModels.Edits.csproj">
+      <Project>{39e8ed6c-3992-4523-ae4f-9f5efa0eaf75}</Project>
+      <Name>Griasdi.Mvvms.ViewModels.Edits</Name>
+    </ProjectReference>
+    <ProjectReference Include="MVVMS\VIEWMODELS\Griasdi.Mvvms.ViewModels.Factories\Griasdi.Mvvms.ViewModels.Factories.csproj">
+      <Project>{2c459479-7355-4ee1-8a19-dc0d138bebe9}</Project>
+      <Name>Griasdi.Mvvms.ViewModels.Factories</Name>
+    </ProjectReference>
     <ProjectReference Include="MVVMS\VIEWMODELS\Griasdi.Mvvms.ViewModels\Griasdi.Mvvms.ViewModels.csproj">
       <Project>{fcc2b7ca-2e50-4d4b-9f13-d78279e48a7c}</Project>
       <Name>Griasdi.Mvvms.ViewModels</Name>

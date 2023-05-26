@@ -16,5 +16,13 @@ namespace Griasdi.Mvvms.Views.NativeViews
         {
             InitializeComponent();
         }
+
+        public virtual void Build()
+        {
+        }
+
+        public virtual void RegisterEvents()
+        {
+        }
     }
 }

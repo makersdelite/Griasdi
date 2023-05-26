@@ -1,6 +1,6 @@
 ﻿namespace Griasdi.Mvvms.Views.NativeViews.EditViewControls
 {
-    partial class SingleLineEditBoxViewControl
+    partial class SingleLineEditBoxNativeViewControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -39,12 +39,12 @@
             this.TextBox.Size = new System.Drawing.Size(327, 20);
             this.TextBox.TabIndex = 0;
             // 
-            // SingleLineEditBoxViewControl
+            // SingleLineEditBoxNativeViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TextBox);
-            this.Name = "SingleLineEditBoxViewControl";
+            this.Name = "SingleLineEditBoxNativeViewControl";
             this.Size = new System.Drawing.Size(327, 22);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -13,7 +13,7 @@ namespace GriasdiWinFormApp
     //source: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.applicationcontext?view=windowsdesktop-7.0
     public class GriasdiAppContext: ApplicationContext
     {
-        public ViewModelBase ViewModel { get; set; }
+        public ViewViewModelBase ViewModel { get; set; }
 
         public GriasdiAppContext()
         {

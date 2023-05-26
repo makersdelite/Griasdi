@@ -30,31 +30,31 @@ namespace Griasdi.Mvvms.Views.NativeViews.EditViewControls.PRIMITIVES
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelViewControl1 = new Griasdi.Mvvms.Views.NativeViews.PRIMITIVES.LabelViewControl();
-            this.singleLineEditBoxViewControl1 = new Griasdi.Mvvms.Views.NativeViews.EditViewControls.SingleLineEditBoxViewControl();
+            this.LabelViewControl = new Griasdi.Mvvms.Views.NativeViews.PRIMITIVES.LabelViewControl();
+            this.SingleLineEditBoxViewControl = new Griasdi.Mvvms.Views.NativeViews.EditViewControls.SingleLineEditBoxNativeViewControl();
             this.SuspendLayout();
             // 
-            // labelViewControl1
+            // LabelViewControl
             // 
-            this.labelViewControl1.Location = new System.Drawing.Point(4, 4);
-            this.labelViewControl1.Name = "labelViewControl1";
-            this.labelViewControl1.Size = new System.Drawing.Size(176, 20);
-            this.labelViewControl1.TabIndex = 0;
+            this.LabelViewControl.Location = new System.Drawing.Point(4, 4);
+            this.LabelViewControl.Name = "LabelViewControl";
+            this.LabelViewControl.Size = new System.Drawing.Size(176, 20);
+            this.LabelViewControl.TabIndex = 0;
             // 
-            // singleLineEditBoxViewControl1
+            // SingleLineEditBoxViewControl
             // 
-            this.singleLineEditBoxViewControl1.Location = new System.Drawing.Point(146, 0);
-            this.singleLineEditBoxViewControl1.Name = "singleLineEditBoxViewControl1";
-            this.singleLineEditBoxViewControl1.Size = new System.Drawing.Size(327, 22);
-            this.singleLineEditBoxViewControl1.TabIndex = 1;
+            this.SingleLineEditBoxViewControl.Location = new System.Drawing.Point(146, 0);
+            this.SingleLineEditBoxViewControl.Name = "SingleLineEditBoxViewControl";
+            this.SingleLineEditBoxViewControl.Size = new System.Drawing.Size(327, 22);
+            this.SingleLineEditBoxViewControl.TabIndex = 1;
             // 
-            // LabeledEditBoxViewControl
+            // LabeledSingleLineEditBoxViewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.singleLineEditBoxViewControl1);
-            this.Controls.Add(this.labelViewControl1);
-            this.Name = "LabeledEditBoxViewControl";
+            this.Controls.Add(this.SingleLineEditBoxViewControl);
+            this.Controls.Add(this.LabelViewControl);
+            this.Name = "LabeledSingleLineEditBoxViewControl";
             this.Size = new System.Drawing.Size(476, 23);
             this.ResumeLayout(false);
 
@@ -62,7 +62,7 @@ namespace Griasdi.Mvvms.Views.NativeViews.EditViewControls.PRIMITIVES
 
         #endregion
 
-        private LabelViewControl labelViewControl1;
-        private SingleLineEditBoxViewControl singleLineEditBoxViewControl1;
+        private LabelViewControl LabelViewControl;
+        private SingleLineEditBoxNativeViewControl SingleLineEditBoxViewControl;
     }
 }

@@ -41,13 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditViewControlViewModel.cs" />
     <Compile Include="EditViewModelBase.cs" />
+    <Compile Include="PRIMITIVES\SingleLineEditBoxViewModel.cs" />
+    <Compile Include="PRIMITIVES\EditBoxViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\COMMONS\Griasdi.Commons\Griasdi.Commons.csproj">
       <Project>{cabbd549-d234-451c-946c-5a4a5990d61a}</Project>
       <Name>Griasdi.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VIEWS\Griasdi.Mvvms.Views.Edits\Griasdi.Mvvms.Views.Edits.csproj">
+      <Project>{3581BD08-2772-46DC-B2C0-82FCCC0F47B6}</Project>
+      <Name>Griasdi.Mvvms.Views.Edits</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\VIEWS\Griasdi.Mvvms.Views\Griasdi.Mvvms.Views.csproj">
       <Project>{39104d0d-f237-4c21-8e85-66e65dbf2408}</Project>

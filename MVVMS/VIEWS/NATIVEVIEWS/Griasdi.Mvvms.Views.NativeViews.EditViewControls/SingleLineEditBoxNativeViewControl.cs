@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Griasdi.Mvvms.Views.NativeViews.EditViewControls
 {
-    public partial class SingleLineEditBoxViewControl : EditViewControlBase
+    public partial class SingleLineEditBoxNativeViewControl : EditBoxNativeViewControl
     {
-        public SingleLineEditBoxViewControl()
+        public SingleLineEditBoxNativeViewControl()
         {
             InitializeComponent();
         }

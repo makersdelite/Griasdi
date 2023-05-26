@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditViewControlBase.cs">
+    <Compile Include="EditNativeViewControlBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PRIMITIVES\LabeledSingleLineEditBoxViewControl.cs">
@@ -52,15 +52,29 @@
     <Compile Include="PRIMITIVES\LabeledSingleLineEditBoxViewControl.Designer.cs">
       <DependentUpon>LabeledSingleLineEditBoxViewControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="SingleLineEditBoxViewControl.cs">
+    <Compile Include="EditBoxNativeViewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SingleLineEditBoxViewControl.Designer.cs">
-      <DependentUpon>SingleLineEditBoxViewControl.cs</DependentUpon>
+    <Compile Include="EditBoxNativeViewControl.Designer.cs">
+      <DependentUpon>EditBoxNativeViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingleLineEditBoxNativeViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SingleLineEditBoxNativeViewControl.Designer.cs">
+      <DependentUpon>SingleLineEditBoxNativeViewControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\COMMONS\Griasdi.Commons\Griasdi.Commons.csproj">
+      <Project>{cabbd549-d234-451c-946c-5a4a5990d61a}</Project>
+      <Name>Griasdi.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\EVENTS\Griasdi.Events\Griasdi.Events.csproj">
+      <Project>{12dff439-ee6a-4626-a187-ecb985392ed9}</Project>
+      <Name>Griasdi.Events</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Griasdi.Mvvms.Views.NativeViews\Griasdi.Mvvms.Views.NativeViews.csproj">
       <Project>{cae53d2c-2013-4f4c-b5ea-e73893b6c959}</Project>
       <Name>Griasdi.Mvvms.Views.NativeViews</Name>
@@ -68,14 +82,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="EditViewControlBase.resx">
-      <DependentUpon>EditViewControlBase.cs</DependentUpon>
+    <EmbeddedResource Include="EditNativeViewControlBase.resx">
+      <DependentUpon>EditNativeViewControlBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRIMITIVES\LabeledSingleLineEditBoxViewControl.resx">
       <DependentUpon>LabeledSingleLineEditBoxViewControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SingleLineEditBoxViewControl.resx">
-      <DependentUpon>SingleLineEditBoxViewControl.cs</DependentUpon>
+    <EmbeddedResource Include="EditBoxNativeViewControl.resx">
+      <DependentUpon>EditBoxNativeViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingleLineEditBoxNativeViewControl.resx">
+      <DependentUpon>SingleLineEditBoxNativeViewControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Griasdi.Mvvms.ViewModels.Edits
 {
-    public class EditViewModelBase:ViewViewModelBase
+    public class EditViewControlViewModel : ViewControlViewModelBase
     {
     }
 }

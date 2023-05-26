@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griasdi.Mvvms.ViewModels.Ed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griasdi.Mvvms.Views.Edits", "MVVMS\VIEWS\Griasdi.Mvvms.Views.Edits\Griasdi.Mvvms.Views.Edits.csproj", "{3581BD08-2772-46DC-B2C0-82FCCC0F47B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griasdi.Mvvms.ViewModels.Factories", "MVVMS\VIEWMODELS\Griasdi.Mvvms.ViewModels.Factories\Griasdi.Mvvms.ViewModels.Factories.csproj", "{2C459479-7355-4EE1-8A19-DC0D138BEBE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{3581BD08-2772-46DC-B2C0-82FCCC0F47B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3581BD08-2772-46DC-B2C0-82FCCC0F47B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3581BD08-2772-46DC-B2C0-82FCCC0F47B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C459479-7355-4EE1-8A19-DC0D138BEBE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C459479-7355-4EE1-8A19-DC0D138BEBE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C459479-7355-4EE1-8A19-DC0D138BEBE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C459479-7355-4EE1-8A19-DC0D138BEBE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +116,7 @@ Global
 		{3526565E-68B7-4955-AD16-517A3EFE9F51} = {C7FD0659-92BD-44D1-B217-9614CBE95158}
 		{39E8ED6C-3992-4523-AE4F-9F5EFA0EAF75} = {0C465CEB-2265-402C-ADF9-33A69180CFE1}
 		{3581BD08-2772-46DC-B2C0-82FCCC0F47B6} = {2A1F593C-DEFA-4FD1-BD54-B7798BFE7BE9}
+		{2C459479-7355-4EE1-8A19-DC0D138BEBE9} = {0C465CEB-2265-402C-ADF9-33A69180CFE1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {269BCC6B-1170-497B-AE5B-9482950EBC2E}

@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 namespace Griasdi.Mvvms.Views.NativeViews.EditViewControls
 {
-    public class EditViewControlBase:NativeViewControlBase
+    public class EditNativeViewControlBase:NativeViewControlBase
     {
         private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
-            // EditViewControlBase
+            // EditNativeViewControlBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.Name = "EditViewControlBase";
+            this.Name = "EditNativeViewControlBase";
             this.Size = new System.Drawing.Size(392, 49);
             this.ResumeLayout(false);
-
         }
     }
 }
