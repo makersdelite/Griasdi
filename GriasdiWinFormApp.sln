@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EVENTS", "EVENTS", "{39A346
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griasdi.Events", "..\Griasdi.Events\Griasdi.Events.csproj", "{12DFF439-EE6A-4626-A187-ECB985392ED9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griasdi.Helpers.IoHelpers", "Griasdi.Helpers.IoHelpers\Griasdi.Helpers.IoHelpers.csproj", "{6CF44381-EBAF-44CE-A421-BCF38DE2FB17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{12DFF439-EE6A-4626-A187-ECB985392ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12DFF439-EE6A-4626-A187-ECB985392ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12DFF439-EE6A-4626-A187-ECB985392ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF44381-EBAF-44CE-A421-BCF38DE2FB17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF44381-EBAF-44CE-A421-BCF38DE2FB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF44381-EBAF-44CE-A421-BCF38DE2FB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF44381-EBAF-44CE-A421-BCF38DE2FB17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{39104D0D-F237-4C21-8E85-66E65DBF2408} = {2A1F593C-DEFA-4FD1-BD54-B7798BFE7BE9}
 		{27946BFF-64CB-4D96-AA24-5C8218DC6B9B} = {7EA388FB-CF2B-46AB-B331-A619A5B93D21}
 		{12DFF439-EE6A-4626-A187-ECB985392ED9} = {39A34645-6D4A-421D-B3A7-D3A62AD09C8C}
+		{6CF44381-EBAF-44CE-A421-BCF38DE2FB17} = {7EA388FB-CF2B-46AB-B331-A619A5B93D21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {269BCC6B-1170-497B-AE5B-9482950EBC2E}
