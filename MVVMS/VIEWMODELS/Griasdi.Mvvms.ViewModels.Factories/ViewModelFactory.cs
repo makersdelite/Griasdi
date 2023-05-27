@@ -1,4 +1,5 @@
-﻿using Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES;
+﻿using Griasdi.Mvvms.ViewModels.Buttons.PRIMITIVES;
+using Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,9 @@ namespace Griasdi.Mvvms.ViewModels.Factories
                     break;
                 case "MULTI-LINE-EDIT-BOX":
                     retVal = new MultiLineEditBoxViewModel();
+                    break;
+                case "STANDARD-BUTTON":
+                    retVal = new StandardButtonViewModel();
                     break;
                 default:
                     break;

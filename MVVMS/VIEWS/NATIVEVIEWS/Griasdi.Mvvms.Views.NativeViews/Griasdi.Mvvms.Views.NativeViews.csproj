@@ -71,5 +71,11 @@
       <DependentUpon>LabelViewControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\EVENTS\Griasdi.Events\Griasdi.Events.csproj">
+      <Project>{12DFF439-EE6A-4626-A187-ECB985392ED9}</Project>
+      <Name>Griasdi.Events</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

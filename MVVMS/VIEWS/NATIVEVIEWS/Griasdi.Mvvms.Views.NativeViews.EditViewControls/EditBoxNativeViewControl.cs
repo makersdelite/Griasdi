@@ -86,16 +86,23 @@ namespace Griasdi.Mvvms.Views.NativeViews.EditViewControls
             tb.WordWrap = true;
         }
 
-        public override void SetHeight(int value)
-        {
-            base.SetHeight(value);
-            this.TextBox.Height = value;
-        }
         public override void SetTop(int value)
         {
             base.SetTop(value);
             this.TextBox.Top = 0;
         }
+        public override void SetLeft(int value)
+        {
+            base.SetLeft(value);
+            this.TextBox.Left = 0;
+        }
+
+        public override void SetHeight(int value)
+        {
+            base.SetHeight(value);
+            this.TextBox.Height = value;
+        }
+        
 
         public override void SetWidth(int value)
         {

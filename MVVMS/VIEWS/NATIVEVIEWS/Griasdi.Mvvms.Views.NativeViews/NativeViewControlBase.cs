@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Griasdi.Events;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,29 @@ namespace Griasdi.Mvvms.Views.NativeViews
 {
     public partial class NativeViewControlBase : UserControl
     {
+
+        #region event section
+        #region click
+        public event EventHandler<GriasdiEventArgs> NativeViewControlClicked;
+        public void OnNativeViewControlClicked(GriasdiEventArgs e)
+        {
+            EventHandler<GriasdiEventArgs> handler = NativeViewControlClicked;
+            if (handler != null)
+            {
+                handler(this, e);
+            }
+        }
+        public void RaiseNativeViewControlClickEvent(EventArgs e)
+        {
+            var ea = new GriasdiViewEventArgs();
+            ea.Add("CLICKED-EVENT-ARGS", e);
+            this.OnNativeViewControlClicked(ea);
+        }
+        #endregion
+        #endregion
+
+
+
         public NativeViewControlBase()
         {
             InitializeComponent();

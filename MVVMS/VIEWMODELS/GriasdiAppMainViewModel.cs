@@ -1,4 +1,6 @@
-﻿using Griasdi.Mvvms.ViewModels;
+﻿using Griasdi.Events;
+using Griasdi.Mvvms.ViewModels;
+using Griasdi.Mvvms.ViewModels.Buttons.PRIMITIVES;
 using Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES;
 using Griasdi.Mvvms.ViewModels.Factories;
 using Griasdi.Mvvms.Views;
@@ -8,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
 {
@@ -25,7 +28,7 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
             this.SetView(view);
             this.RegisterEvents();
 
-
+            #region add edit boxes
             var sleb0 = ViewModelFactory.Get("SINGLE-LINE-EDIT-BOX") as EditBoxViewModel;
             sleb0.SetValue("Moinsen");
             this.Add(sleb0);
@@ -42,7 +45,32 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
             var sleb2 = ViewModelFactory.Get("SINGLE-LINE-EDIT-BOX") as EditBoxViewModel;
             sleb2.SetValue("Hi");
             this.Add(sleb2);
+            #endregion
 
+            #region add buttons
+            var sb0 = ViewModelFactory.Get("STANDARD-BUTTON") as ButtonViewModel;
+            sb0.SetValue("Info");
+            sb0.ViewModelClicked += Sb0_ViewModelClicked;
+            this.Add("INFO-BUTTON", sb0);
+            #endregion
+            #region add buttons
+            var sb1 = ViewModelFactory.Get("STANDARD-BUTTON") as ButtonViewModel;
+            sb1.SetValue("Help");
+            sb1.ViewModelClicked += Sb0_ViewModelClicked;
+            this.Add("HELP-BUTTON", sb1);
+            #endregion
+            #region add buttons
+            var sb2 = ViewModelFactory.Get("STANDARD-BUTTON") as ButtonViewModel;
+            sb2.SetValue("Settings");
+            sb2.ViewModelClicked += Sb0_ViewModelClicked;
+            this.Add("SETTINGS-BUTTON",sb2);
+            #endregion
+            #region add buttons
+            var sb3 = ViewModelFactory.Get("STANDARD-BUTTON") as ButtonViewModel;
+            sb3.SetValue("Print");
+            sb3.ViewModelClicked += Sb0_ViewModelClicked;
+            this.Add("PRINT-BUTTON",sb3);
+            #endregion
 
 
 
@@ -52,11 +80,11 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
             {
                 return;
             }
-            var vmTopOffset = 200;
+            var vmTopOffset = 10;
             var vmRunningTop = vmTopOffset;
             foreach (var childVm in this.Children)
             {
-                var vm = childVm.Value as EditBoxViewModel;
+                var vm = childVm.Value as ViewControlViewModelBase;
                 if(vm == null)
                 {
                     continue;
@@ -65,7 +93,7 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
                 var vx = vm.View as ViewControlBase;
                 var vxNative = vx.NativeViewControl;
                 vxNative.SetTop(vmRunningTop);
-                vxNative.Left = 10;
+                vxNative.SetLeft(10);
                 vxNative.SetWidth(300);
 
 
@@ -75,15 +103,31 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
                 }
                 else
                 {
-                    vxNative.Height = 22;
+                    if (vm is SingleLineEditBoxViewModel)
+                    {
+                        vxNative.SetHeight(22);
+                    }
+                    if(vm is ButtonViewModel) 
+                    {
+                        vxNative.SetHeight(50);
+                    }
                 }
-                
-                view.NativeView.Controls.Add(vxNative);
 
+                view.NativeView.Controls.Add(vxNative);
                 vmRunningTop += vxNative.Height + 5;
             }
             
 
+        }
+
+        private void Sb0_ViewModelClicked(object sender, GriasdiEventArgs e)
+        {
+            var vm = sender as ViewModelBase;
+            if(vm == null)
+            {
+                return;
+            }
+            MessageBox.Show("ViewModel (resp. underlying native control) name: " + vm.Name + " text: " + vm.Caption +  " uid: " + vm.Uid + " type: " + vm.ToString() + " has been clicked.");
         }
     }
 }
