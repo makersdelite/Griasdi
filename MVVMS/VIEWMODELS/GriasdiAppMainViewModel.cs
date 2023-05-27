@@ -45,33 +45,45 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
             var sleb2 = ViewModelFactory.Get("SINGLE-LINE-EDIT-BOX") as EditBoxViewModel;
             sleb2.SetValue("Hi");
             this.Add(sleb2);
+
+            var sleb3 = ViewModelFactory.GetSingleLineEditBox("GREETING-ITALIAN-EDIT-BOX","Ciao");
+            this.Add(sleb3);
             #endregion
 
             #region add buttons
             var sb0 = ViewModelFactory.Get("STANDARD-BUTTON") as ButtonViewModel;
             sb0.SetValue("Info");
-            sb0.ViewModelClicked += Sb0_ViewModelClicked;
+            sb0.ViewModelClicked += ButtonViewModelClicked;
             this.Add("INFO-BUTTON", sb0);
             #endregion
             #region add buttons
             var sb1 = ViewModelFactory.Get("STANDARD-BUTTON") as ButtonViewModel;
             sb1.SetValue("Help");
-            sb1.ViewModelClicked += Sb0_ViewModelClicked;
+            sb1.ViewModelClicked += ButtonViewModelClicked;
             this.Add("HELP-BUTTON", sb1);
             #endregion
             #region add buttons
             var sb2 = ViewModelFactory.Get("STANDARD-BUTTON") as ButtonViewModel;
             sb2.SetValue("Settings");
-            sb2.ViewModelClicked += Sb0_ViewModelClicked;
+            sb2.ViewModelClicked += ButtonViewModelClicked;
             this.Add("SETTINGS-BUTTON",sb2);
             #endregion
             #region add buttons
             var sb3 = ViewModelFactory.Get("STANDARD-BUTTON") as ButtonViewModel;
             sb3.SetValue("Print");
-            sb3.ViewModelClicked += Sb0_ViewModelClicked;
+            sb3.ViewModelClicked += ButtonViewModelClicked;
             this.Add("PRINT-BUTTON",sb3);
             #endregion
+            #region add buttons
+            var sb4 = ViewModelFactory.GetButton("New");
+            sb4.ViewModelClicked += ButtonViewModelClicked;
+            this.Add(sb4);
 
+            var sb5 = ViewModelFactory.GetButton("SAVE-BUTTON", "Save");
+            sb5.ViewModelClicked += ButtonViewModelClicked;
+            this.Add(sb5);
+
+            #endregion
 
 
 
@@ -120,7 +132,16 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
 
         }
 
-        private void Sb0_ViewModelClicked(object sender, GriasdiEventArgs e)
+      
+
+        public async Task<bool> SaveThisStuffAsync()
+        {
+            bool retVal = false;
+            await Task.Delay(0);
+            return retVal;
+        }
+
+        private void ButtonViewModelClicked(object sender, GriasdiEventArgs e)
         {
             var vm = sender as ViewModelBase;
             if(vm == null)
