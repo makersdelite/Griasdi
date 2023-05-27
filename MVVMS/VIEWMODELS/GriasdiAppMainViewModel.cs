@@ -48,6 +48,12 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
 
             var sleb3 = ViewModelFactory.GetSingleLineEditBox("GREETING-ITALIAN-EDIT-BOX","Ciao");
             this.Add(sleb3);
+
+
+            var sleb4 = this.AddSingleLineEditBox("GREETING-GREEK-EDIT-BOX", "yasou");
+            var sleb5 = this.AddMultiLineEditBox("GREETING-GREEK-INFO-EDIT-BOX", "yasou or short ya! is the greek way to say 'hi'");
+
+
             #endregion
 
             #region add buttons
@@ -73,7 +79,10 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
             sb3.SetValue("Print");
             sb3.ViewModelClicked += ButtonViewModelClicked;
             this.Add("PRINT-BUTTON",sb3);
+
+                     
             #endregion
+            
             #region add buttons
             var sb4 = ViewModelFactory.GetButton("New");
             sb4.ViewModelClicked += ButtonViewModelClicked;
@@ -82,10 +91,10 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
             var sb5 = ViewModelFactory.GetButton("SAVE-BUTTON", "Save");
             sb5.ViewModelClicked += ButtonViewModelClicked;
             this.Add(sb5);
-
             #endregion
 
-
+            var sb6 = this.AddButton("EDIT-BUTTON", "Edit");
+            sb6.ViewModelClicked += ButtonViewModelClicked;
 
             //temp render section
             if (this.Children == null)
@@ -132,7 +141,32 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
 
         }
 
-      
+        public EditBoxViewModel AddSingleLineEditBox(string name, string caption)
+        {
+            EditBoxViewModel retVal = null;
+            var vm = ViewModelFactory.GetSingleLineEditBox(name, caption);
+            this.Add(vm);
+            retVal = vm;
+            return retVal;
+        }
+        public EditBoxViewModel AddMultiLineEditBox(string name, string caption)
+        {
+            EditBoxViewModel retVal = null;
+            var vm = ViewModelFactory.GetMultiLineEditBox(name, caption);
+            this.Add(vm);
+            retVal = vm;
+            return retVal;
+        }
+
+
+        public ButtonViewModel AddButton(string name, string caption)
+        {
+            ButtonViewModel retVal = null;
+            var vm = ViewModelFactory.GetButton(name, caption);
+            this.Add(vm);
+            retVal = vm;
+            return retVal;
+        }
 
         public async Task<bool> SaveThisStuffAsync()
         {
