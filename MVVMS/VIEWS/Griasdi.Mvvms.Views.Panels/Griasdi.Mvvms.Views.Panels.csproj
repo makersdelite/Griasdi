@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CABBD549-D234-451C-946C-5A4A5990D61A}</ProjectGuid>
+    <ProjectGuid>{CA07DDDB-9447-45DD-A6EA-AB6AF3A2FCC4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Griasdi.Commons</RootNamespace>
-    <AssemblyName>Griasdi.Commons</AssemblyName>
+    <RootNamespace>Griasdi.Mvvms.Views.Panels</RootNamespace>
+    <AssemblyName>Griasdi.Mvvms.Views.Panels</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,14 +42,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GriasdiAppBase.cs" />
-    <Compile Include="GriasdiBase.cs" />
+    <Compile Include="PanelViewControl.cs" />
+    <Compile Include="PRIMITIVES\StandardPanelViewControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\HELPERS\Griasdi.Helpers.StringHelpers\Griasdi.Helpers.StringHelpers.csproj">
-      <Project>{27946bff-64cb-4d96-aa24-5c8218dc6b9b}</Project>
-      <Name>Griasdi.Helpers.StringHelpers</Name>
+    <ProjectReference Include="..\..\..\COMMONS\Griasdi.Commons\Griasdi.Commons.csproj">
+      <Project>{cabbd549-d234-451c-946c-5a4a5990d61a}</Project>
+      <Name>Griasdi.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\EVENTS\Griasdi.Events\Griasdi.Events.csproj">
+      <Project>{12dff439-ee6a-4626-a187-ecb985392ed9}</Project>
+      <Name>Griasdi.Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Griasdi.Mvvms.Views\Griasdi.Mvvms.Views.csproj">
+      <Project>{39104d0d-f237-4c21-8e85-66e65dbf2408}</Project>
+      <Name>Griasdi.Mvvms.Views</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NATIVEVIEWS\Griasdi.Mvvms.Views.NativeViews.PanelViewControls\Griasdi.Mvvms.Views.NativeViews.PanelViewControls.csproj">
+      <Project>{14130eef-ec8d-46ed-9c7e-3b69b3a9aa1f}</Project>
+      <Name>Griasdi.Mvvms.Views.NativeViews.PanelViewControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NATIVEVIEWS\Griasdi.Mvvms.Views.NativeViews\Griasdi.Mvvms.Views.NativeViews.csproj">
+      <Project>{cae53d2c-2013-4f4c-b5ea-e73893b6c959}</Project>
+      <Name>Griasdi.Mvvms.Views.NativeViews</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -50,5 +50,22 @@ namespace Griasdi.Mvvms.ViewModels
         {
            
         }
+
+        public virtual void Render()
+        {
+            if(this.Children == null)
+            {
+                return;
+            }
+            foreach (var child in this.Children)
+            {
+                var vm = child.Value as ViewModelBase;
+                if(vm == null)
+                {
+                    continue;
+                }
+                vm.Render();
+            }
+        }
     }
 }

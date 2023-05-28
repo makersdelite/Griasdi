@@ -83,6 +83,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Griasdi.Apps.GreetingTranslatorApps\Griasdi.Apps.GreetingTranslatorApps.csproj">
+      <Project>{dfcdc7b1-9252-4fac-a7c1-1231b40e42a3}</Project>
+      <Name>Griasdi.Apps.GreetingTranslatorApps</Name>
+    </ProjectReference>
     <ProjectReference Include="COMMONS\Griasdi.Commons\Griasdi.Commons.csproj">
       <Project>{cabbd549-d234-451c-946c-5a4a5990d61a}</Project>
       <Name>Griasdi.Commons</Name>
@@ -126,6 +130,14 @@
     <ProjectReference Include="MVVMS\VIEWS\NATIVEVIEWS\Griasdi.Mvvms.Views.NativeViews\Griasdi.Mvvms.Views.NativeViews.csproj">
       <Project>{CAE53D2C-2013-4F4C-B5EA-E73893B6C959}</Project>
       <Name>Griasdi.Mvvms.Views.NativeViews</Name>
+    </ProjectReference>
+    <ProjectReference Include="PLAYGROUNDS\TRADEFAIRS\Griasdi.Tradefairs.Commons\Griasdi.Tradefairs.Commons.csproj">
+      <Project>{fb397f39-3693-44b6-89f5-c7d6e7a4d218}</Project>
+      <Name>Griasdi.Tradefairs.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="PLAYGROUNDS\TRADEFAIRS\Griasdi.Tradefairs.Exhibitors\Griasdi.Tradefairs.Exhibitors.csproj">
+      <Project>{6ff7a679-4c5a-4e32-b78d-f0b55cf0a18c}</Project>
+      <Name>Griasdi.Tradefairs.Exhibitors</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
