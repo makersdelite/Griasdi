@@ -83,10 +83,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Griasdi.Apps.GreetingTranslatorApps\Griasdi.Apps.GreetingTranslatorApps.csproj">
-      <Project>{dfcdc7b1-9252-4fac-a7c1-1231b40e42a3}</Project>
-      <Name>Griasdi.Apps.GreetingTranslatorApps</Name>
-    </ProjectReference>
     <ProjectReference Include="COMMONS\Griasdi.Commons\Griasdi.Commons.csproj">
       <Project>{cabbd549-d234-451c-946c-5a4a5990d61a}</Project>
       <Name>Griasdi.Commons</Name>
@@ -130,6 +126,14 @@
     <ProjectReference Include="MVVMS\VIEWS\NATIVEVIEWS\Griasdi.Mvvms.Views.NativeViews\Griasdi.Mvvms.Views.NativeViews.csproj">
       <Project>{CAE53D2C-2013-4F4C-B5EA-E73893B6C959}</Project>
       <Name>Griasdi.Mvvms.Views.NativeViews</Name>
+    </ProjectReference>
+    <ProjectReference Include="PLAYGROUNDS\TRADEFAIRS\APPS\Griasdi.Apps.GreetingTranslatorApps\Griasdi.Apps.GreetingTranslatorApps.csproj">
+      <Project>{dfcdc7b1-9252-4fac-a7c1-1231b40e42a3}</Project>
+      <Name>Griasdi.Apps.GreetingTranslatorApps</Name>
+    </ProjectReference>
+    <ProjectReference Include="PLAYGROUNDS\TRADEFAIRS\APPS\Griasdi.Apps.OcrEngineApps\Griasdi.Apps.OcrEngineApps.csproj">
+      <Project>{f2268a00-ed3a-443f-b3b8-86d1f345aaf7}</Project>
+      <Name>Griasdi.Apps.OcrEngineApps</Name>
     </ProjectReference>
     <ProjectReference Include="PLAYGROUNDS\TRADEFAIRS\Griasdi.Tradefairs.Commons\Griasdi.Tradefairs.Commons.csproj">
       <Project>{fb397f39-3693-44b6-89f5-c7d6e7a4d218}</Project>

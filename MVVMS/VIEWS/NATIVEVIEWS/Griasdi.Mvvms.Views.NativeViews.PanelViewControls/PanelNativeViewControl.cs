@@ -22,7 +22,7 @@ namespace Griasdi.Mvvms.Views.NativeViews.PanelViewControls
         public override void Build()
         {
 
-            this.Dock = DockStyle.Fill;
+            this.Dock = DockStyle.None;
             this.Panel.Left = 0;
             this.Panel.Top = 0;
             this.Panel.Dock = DockStyle.Fill;
