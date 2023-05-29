@@ -1,6 +1,7 @@
 ﻿using Griasdi.Events;
 using Griasdi.Mvvms.Views.NativeViews;
 using Griasdi.Mvvms.Views.NativeViews.PanelViewControls;
+using Griasdi.Mvvms.Views.NativeViews.PanelViewControls.PRIMITIVES;
 using System;
 using System.Collections.Generic;
 using System.Linq;

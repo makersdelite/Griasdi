@@ -5,6 +5,7 @@ using Griasdi.Mvvms.ViewModels.Factories;
 using Griasdi.Mvvms.ViewModels.Panels.PRIMITIVES;
 using Griasdi.Mvvms.Views;
 using Griasdi.Mvvms.Views.NativeViews.PanelViewControls;
+using Griasdi.Mvvms.Views.NativeViews.PanelViewControls.PRIMITIVES;
 using Griasdi.Mvvms.Views.Panels.PRIMITIVES;
 using System;
 using System.Collections.Generic;
@@ -99,25 +100,29 @@ namespace Griasdi.Apps.OcrEngineApps.MVVMS.VIEWMODELS
                 }
 
                 var vx = vm.View as ViewControlBase;
+                vx.SetTop(vmRunningTop);
+                vx.SetLeft(10);
+                vx.SetWidth(300);
+
                 var vxNative = vx.NativeViewControl;
-                vxNative.SetTop(vmRunningTop);
-                vxNative.SetLeft(10);
-                vxNative.SetWidth(300);
+                //vxNative.SetTop(vmRunningTop);
+                //vxNative.SetLeft(10);
+                //vxNative.SetWidth(300);
 
 
                 if (vm is MultiLineEditBoxViewModel)
                 {
-                    vxNative.SetHeight(125);
+                    vx.SetHeight(125);
                 }
                 else
                 {
                     if (vm is SingleLineEditBoxViewModel)
                     {
-                        vxNative.SetHeight(22);
+                        vx.SetHeight(22);
                     }
                     if (vm is ButtonViewModel)
                     {
-                        vxNative.SetHeight(50);
+                        vx.SetHeight(50);
                     }
                 }
 

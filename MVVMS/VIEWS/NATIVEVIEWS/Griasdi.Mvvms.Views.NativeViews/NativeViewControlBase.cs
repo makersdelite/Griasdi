@@ -57,11 +57,11 @@ namespace Griasdi.Mvvms.Views.NativeViews
         {
             this.Width = value;
         }
-        public virtual void SetTop(int value) 
+        public virtual void SetTop(int value)
         {
             this.Top = value;
         }
-        public virtual void SetLeft(int value) 
+        public virtual void SetLeft(int value)
         {
             this.Left = value;
         }

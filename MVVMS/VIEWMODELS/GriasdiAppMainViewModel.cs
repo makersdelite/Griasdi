@@ -41,8 +41,6 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
             exhibitor1.Build();
             var vmExhibitor1 = exhibitor1.ViewModel;
             this.Add(vmExhibitor1);
-
-
             #endregion
 
 
@@ -69,24 +67,24 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
 
                 var vx = vm.View as ViewControlBase;
                 var vxNative = vx.NativeViewControl;
-                vxNative.SetTop(vmRunningTop);
-                vxNative.SetLeft(10);
+                vx.SetTop(vmRunningTop);
+                vx.SetLeft(10);
                 //vxNative.SetWidth(750);
 
 
                 if (vm is MultiLineEditBoxViewModel)
                 {
-                    vxNative.SetHeight(125);
+                    vx.SetHeight(125);
                 }
                 else
                 {
                     if (vm is SingleLineEditBoxViewModel)
                     {
-                        vxNative.SetHeight(22);
+                        vx.SetHeight(22);
                     }
                     if(vm is ButtonViewModel) 
                     {
-                        vxNative.SetHeight(50);
+                        vx.SetHeight(50);
                     }
                 }             
                 view.NativeView.Controls.Add(vxNative);

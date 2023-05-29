@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace Griasdi.Mvvms.Views.NativeViews.PanelViewControls
+namespace Griasdi.Mvvms.Views.NativeViews.PanelViewControls.PRIMITIVES
 {
     public partial class PanelNativeViewControl : PanelNativeViewControlBase
     {

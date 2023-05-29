@@ -34,7 +34,7 @@ namespace Griasdi.Mvvms.Views
         #endregion
 
 
-        public NativeViewControlBase NativeViewControl{ get; set; }
+        public Control NativeViewControl{ get; set; }
 
         public virtual void SetViewControl(NativeViewControlBase nativeView)
         {
@@ -47,13 +47,29 @@ namespace Griasdi.Mvvms.Views
             this.RegisterEvents();
         }
 
+        public virtual void SetViewControl(Control nativeView)
+        {
+            this.NativeViewControl = nativeView;
+
+            if (this.NativeViewControl == null)
+            {
+                return;
+            }
+            this.RegisterEvents();
+        }
+
         public override void RegisterEvents()
         {
             if(this.NativeViewControl == null)
             {
                 return;
             }
-            this.NativeViewControl.NativeViewControlClicked += NativeViewControl_NativeViewControlClicked;
+
+            if(this.NativeViewControl is NativeViewControlBase)
+            {
+                var ctl = this.NativeViewControl as NativeViewControlBase;
+                ctl.NativeViewControlClicked += NativeViewControl_NativeViewControlClicked;
+            }
         }
 
         #region event handler
@@ -62,5 +78,53 @@ namespace Griasdi.Mvvms.Views
             this.RaiseViewControlClickEvent(e);
         }
         #endregion
+
+
+
+        public virtual void SetHeight(int value)
+        {
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if(uc != null)
+            {
+                uc.SetHeight(value);
+                return;
+            }
+           
+            this.NativeViewControl.Height= value;
+        }
+        public virtual void SetWidth(int value)
+        {
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                uc.SetWidth(value);
+                return;
+            }
+
+            this.NativeViewControl.Width = value;
+        }
+        public virtual void SetTop(int value)
+        {
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                uc.SetTop(value);
+                return;
+            }
+
+            this.NativeViewControl.Height = value;
+        }
+        public virtual void SetLeft(int value)
+        {
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                uc.SetLeft(value);
+                return;
+            }
+
+            this.NativeViewControl.Left = value;
+        }
+
     }
 }

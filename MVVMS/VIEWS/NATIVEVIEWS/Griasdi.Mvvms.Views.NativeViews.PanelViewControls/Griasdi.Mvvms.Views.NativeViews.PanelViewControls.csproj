@@ -43,13 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="COMPOSITES\ThreePanelNativeViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="COMPOSITES\ThreePanelNativeViewControl.Designer.cs">
+      <DependentUpon>ThreePanelNativeViewControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelNativeViewControlBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PanelNativeViewControl.cs">
+    <Compile Include="PRIMITIVES\PanelNativeViewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PanelNativeViewControl.Designer.cs">
+    <Compile Include="PRIMITIVES\PanelNativeViewControl.Designer.cs">
       <DependentUpon>PanelNativeViewControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,14 +74,15 @@
       <Name>Griasdi.Mvvms.Views.NativeViews</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="PRIMITIVES\" />
-  </ItemGroup>
-  <ItemGroup>
+    <EmbeddedResource Include="COMPOSITES\ThreePanelNativeViewControl.resx">
+      <DependentUpon>ThreePanelNativeViewControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelNativeViewControlBase.resx">
       <DependentUpon>PanelNativeViewControlBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PanelNativeViewControl.resx">
+    <EmbeddedResource Include="PRIMITIVES\PanelNativeViewControl.resx">
       <DependentUpon>PanelNativeViewControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

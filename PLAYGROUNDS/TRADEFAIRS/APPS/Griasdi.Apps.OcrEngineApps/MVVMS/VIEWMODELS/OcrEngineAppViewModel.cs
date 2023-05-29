@@ -1,6 +1,7 @@
 ﻿using Griasdi.Mvvms.ViewModels;
 using Griasdi.Mvvms.Views;
 using Griasdi.Mvvms.Views.NativeViews.PanelViewControls;
+using Griasdi.Mvvms.Views.NativeViews.PanelViewControls.PRIMITIVES;
 using Griasdi.Tradefairs.Exhibitors;
 using Griasdi.Tradefairs.Exhibitors.MVVMS.VIEWMODELS;
 using System;

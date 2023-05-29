@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="COMPOSITES\ThreePanelViewModel.cs" />
     <Compile Include="PanelViewControlViewModel.cs" />
     <Compile Include="PRIMITIVES\PanelViewModel.cs" />
     <Compile Include="PRIMITIVES\StandardPanelViewModel.cs" />

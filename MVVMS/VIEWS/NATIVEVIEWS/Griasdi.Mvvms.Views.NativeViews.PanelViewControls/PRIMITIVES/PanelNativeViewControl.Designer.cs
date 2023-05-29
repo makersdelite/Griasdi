@@ -1,4 +1,4 @@
-﻿namespace Griasdi.Mvvms.Views.NativeViews.PanelViewControls
+﻿namespace Griasdi.Mvvms.Views.NativeViews.PanelViewControls.PRIMITIVES
 {
     partial class PanelNativeViewControl
     {
