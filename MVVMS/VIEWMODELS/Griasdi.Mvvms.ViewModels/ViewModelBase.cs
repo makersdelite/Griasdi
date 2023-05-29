@@ -48,8 +48,43 @@ namespace Griasdi.Mvvms.ViewModels
         }
         public virtual void Show()
         {
-           
         }
+        public virtual void SetLeft(int value)
+        {
+        }
+        public virtual void SetTop(int value)
+        {
+        }
+        public virtual void SetWidth(int value)
+        {
+        }
+        public virtual void SetHeight(int value)
+        {
+        }
+
+
+        public virtual int GetLeft()
+        {
+            int retVal = 0;
+            return retVal;
+        }
+        public virtual int GetTop()
+        {
+            int retVal = 0;
+            return retVal;
+        }
+        public virtual int GetWidth()
+        {
+            int retVal = 0;
+            return retVal;
+        }
+        public virtual int GetHeight()
+        {
+            int retVal = 0;
+            return retVal;
+        }
+
+
 
         public virtual void Render()
         {

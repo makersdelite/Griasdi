@@ -35,6 +35,8 @@
             // 
             // Panel0
             // 
+            this.Panel0.BackColor = System.Drawing.Color.LightGray;
+            this.Panel0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Panel0.Location = new System.Drawing.Point(3, 3);
             this.Panel0.Name = "Panel0";
             this.Panel0.Size = new System.Drawing.Size(138, 37);
@@ -42,6 +44,8 @@
             // 
             // Panel1
             // 
+            this.Panel1.BackColor = System.Drawing.Color.Yellow;
+            this.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Panel1.Location = new System.Drawing.Point(147, 3);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(138, 37);
@@ -49,6 +53,7 @@
             // 
             // Panel2
             // 
+            this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Panel2.Location = new System.Drawing.Point(291, 3);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(138, 37);

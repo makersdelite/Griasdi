@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="COMPOSITES\LabeledDeepSingleLineEditBoxViewModel.cs" />
     <Compile Include="EditViewControlViewModel.cs" />
     <Compile Include="EditViewModelBase.cs" />
     <Compile Include="PRIMITIVES\MultiLineEditBoxViewModel.cs" />
@@ -53,9 +56,17 @@
       <Project>{cabbd549-d234-451c-946c-5a4a5990d61a}</Project>
       <Name>Griasdi.Commons</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\VIEWS\Griasdi.Mvvms.Views.Buttons\Griasdi.Mvvms.Views.Buttons.csproj">
+      <Project>{b0291fcd-c34f-44ca-a18d-7ebf3dff520d}</Project>
+      <Name>Griasdi.Mvvms.Views.Buttons</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\VIEWS\Griasdi.Mvvms.Views.Edits\Griasdi.Mvvms.Views.Edits.csproj">
       <Project>{3581BD08-2772-46DC-B2C0-82FCCC0F47B6}</Project>
       <Name>Griasdi.Mvvms.Views.Edits</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VIEWS\Griasdi.Mvvms.Views.Panels\Griasdi.Mvvms.Views.Panels.csproj">
+      <Project>{CA07DDDB-9447-45DD-A6EA-AB6AF3A2FCC4}</Project>
+      <Name>Griasdi.Mvvms.Views.Panels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\VIEWS\Griasdi.Mvvms.Views\Griasdi.Mvvms.Views.csproj">
       <Project>{39104d0d-f237-4c21-8e85-66e65dbf2408}</Project>
@@ -65,9 +76,21 @@
       <Project>{3526565e-68b7-4955-ad16-517a3efe9f51}</Project>
       <Name>Griasdi.Mvvms.Views.NativeViews.EditViewControls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\VIEWS\NATIVEVIEWS\Griasdi.Mvvms.Views.NativeViews.PanelViewControls\Griasdi.Mvvms.Views.NativeViews.PanelViewControls.csproj">
+      <Project>{14130eef-ec8d-46ed-9c7e-3b69b3a9aa1f}</Project>
+      <Name>Griasdi.Mvvms.Views.NativeViews.PanelViewControls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\VIEWS\NATIVEVIEWS\Griasdi.Mvvms.Views.NativeViews\Griasdi.Mvvms.Views.NativeViews.csproj">
       <Project>{cae53d2c-2013-4f4c-b5ea-e73893b6c959}</Project>
       <Name>Griasdi.Mvvms.Views.NativeViews</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Griasdi.Mvvms.ViewModels.Buttons\Griasdi.Mvvms.ViewModels.Buttons.csproj">
+      <Project>{465e4616-4cfb-4f80-bb33-9a14966aa46e}</Project>
+      <Name>Griasdi.Mvvms.ViewModels.Buttons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Griasdi.Mvvms.ViewModels.Panels\Griasdi.Mvvms.ViewModels.Panels.csproj">
+      <Project>{029338EE-2A8B-4517-A264-69EEF00901FA}</Project>
+      <Name>Griasdi.Mvvms.ViewModels.Panels</Name>
     </ProjectReference>
     <ProjectReference Include="..\Griasdi.Mvvms.ViewModels\Griasdi.Mvvms.ViewModels.csproj">
       <Project>{fcc2b7ca-2e50-4d4b-9f13-d78279e48a7c}</Project>

@@ -28,8 +28,16 @@ namespace Griasdi.Mvvms.Views.Panels.COMPOSITES
             this.SetViewControl(nativeViewControl);
 
             this.Panel0 = new PanelViewControl();
+            this.Panel0.Build();
+            this.Panel0.NativeViewControl = nativeViewControl.GetPanel0();
+            
             this.Panel1 = new PanelViewControl();
+            this.Panel1.Build();
+            this.Panel1.NativeViewControl = nativeViewControl.GetPanel1();
+            
             this.Panel2 = new PanelViewControl();
+            this.Panel2.Build();
+            this.Panel2.NativeViewControl = nativeViewControl.GetPanel2();
         }
 
         public PanelViewControl GetPanel0()

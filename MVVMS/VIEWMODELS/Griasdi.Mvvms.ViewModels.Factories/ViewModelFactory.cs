@@ -39,6 +39,10 @@ namespace Griasdi.Mvvms.ViewModels.Factories
                 case "STANDARD-BUTTON":
                     retVal = new StandardButtonViewModel();
                     break;
+                case "LABELED-DEEP-SINGLE-LINE-EDIT-BOX":
+                    retVal = new LabeledDeepSingleLineEditBoxViewModel();
+                    break;
+
                 default:
                     break;
             }
@@ -110,6 +114,28 @@ namespace Griasdi.Mvvms.ViewModels.Factories
             retVal = vm;
             return retVal;
         }
+
+        public static EditBoxViewModel GetLabeledDeepSingleLineEditBox(string name, string value)
+        {
+            EditBoxViewModel retVal = null;
+            #region method exit strategy
+            if (name == null)
+            {
+                return retVal;
+            }
+            if (name.Trim().Length == 0)
+            {
+                return retVal;
+            }
+            #endregion
+            var vm = ViewModelFactory.Get("LABELED-DEEP-SINGLE-LINE-EDIT-BOX") as EditBoxViewModel;
+            vm.Name = name.Trim().ToUpper();
+            vm.SetValue(value);
+            retVal = vm;
+            return retVal;
+        }
+
+
         public static EditBoxViewModel GetMultiLineEditBox(string name, string value)
         {
             EditBoxViewModel retVal = null;

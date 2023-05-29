@@ -126,5 +126,52 @@ namespace Griasdi.Mvvms.Views
             this.NativeViewControl.Left = value;
         }
 
+
+        public virtual int GetLeft()
+        {
+            int retVal = 0;
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                retVal = uc.Left;
+            }
+            return retVal;
+        }
+
+        public virtual int GetTop()
+        {
+            int retVal = 0;
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                retVal = uc.Left;
+            }
+            return retVal;
+        }
+
+        public virtual int GetWidth()
+        {
+            int retVal = 0;
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                retVal = uc.Width;
+            }
+            return retVal;
+        }
+
+        public virtual int GetHeight()
+        {
+            int retVal = 0;
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                retVal = uc.Height;
+            }
+            return retVal;
+        }
+       
+
+
     }
 }

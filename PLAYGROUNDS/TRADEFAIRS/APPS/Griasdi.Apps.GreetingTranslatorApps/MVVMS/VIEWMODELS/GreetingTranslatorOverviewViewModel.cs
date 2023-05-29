@@ -47,6 +47,9 @@ namespace Griasdi.Apps.GreetingTranslatorApps.MVVMS.VIEWMODELS
 
             var sleb3 = ViewModelFactory.GetSingleLineEditBox("GREETING-NORTHERN-DE-HAMBURG-CHATTY-EDIT-BOX", "Moin Moin");
             vmInfoPart.Add(sleb3);
+
+            var sleb4 = ViewModelFactory.GetLabeledDeepSingleLineEditBox("GREETING-EN-US-EDIT-BOX", "Hi");
+            vmInfoPart.Add(sleb4);
         }
 
         public override void Render()
@@ -87,6 +90,8 @@ namespace Griasdi.Apps.GreetingTranslatorApps.MVVMS.VIEWMODELS
                 {
                     continue;
                 }
+
+                vm.Render();
 
                 var vx = vm.View as ViewControlBase;
                 var vxNative = vx.NativeViewControl;
