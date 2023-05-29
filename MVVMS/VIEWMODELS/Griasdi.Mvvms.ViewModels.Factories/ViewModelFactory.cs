@@ -40,7 +40,7 @@ namespace Griasdi.Mvvms.ViewModels.Factories
                     retVal = new StandardButtonViewModel();
                     break;
                 case "LABELED-DEEP-SINGLE-LINE-EDIT-BOX":
-                    retVal = new LabeledDeepSingleLineEditBoxViewModel();
+                    retVal = new LabeledSingleLineEditBoxCompositeViewModel();
                     break;
 
                 default:
@@ -115,7 +115,7 @@ namespace Griasdi.Mvvms.ViewModels.Factories
             return retVal;
         }
 
-        public static EditBoxViewModel GetLabeledDeepSingleLineEditBox(string name, string value)
+        public static EditBoxViewModel GetLabeledSingleLineEditBoxComposite(string name, string caption, string value)
         {
             EditBoxViewModel retVal = null;
             #region method exit strategy
@@ -130,7 +130,9 @@ namespace Griasdi.Mvvms.ViewModels.Factories
             #endregion
             var vm = ViewModelFactory.Get("LABELED-DEEP-SINGLE-LINE-EDIT-BOX") as EditBoxViewModel;
             vm.Name = name.Trim().ToUpper();
+            vm.SetCaption(caption);
             vm.SetValue(value);
+            
             retVal = vm;
             return retVal;
         }

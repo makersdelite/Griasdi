@@ -89,7 +89,6 @@ namespace Griasdi.Mvvms.Views
                 uc.SetHeight(value);
                 return;
             }
-           
             this.NativeViewControl.Height= value;
         }
         public virtual void SetWidth(int value)
@@ -100,7 +99,6 @@ namespace Griasdi.Mvvms.Views
                 uc.SetWidth(value);
                 return;
             }
-
             this.NativeViewControl.Width = value;
         }
         public virtual void SetTop(int value)
@@ -111,8 +109,7 @@ namespace Griasdi.Mvvms.Views
                 uc.SetTop(value);
                 return;
             }
-
-            this.NativeViewControl.Height = value;
+            this.NativeViewControl.Top = value;
         }
         public virtual void SetLeft(int value)
         {
@@ -122,7 +119,6 @@ namespace Griasdi.Mvvms.Views
                 uc.SetLeft(value);
                 return;
             }
-
             this.NativeViewControl.Left = value;
         }
 
@@ -134,7 +130,9 @@ namespace Griasdi.Mvvms.Views
             if (uc != null)
             {
                 retVal = uc.Left;
+                return retVal;
             }
+            retVal = this.NativeViewControl.Left;
             return retVal;
         }
 
@@ -145,7 +143,9 @@ namespace Griasdi.Mvvms.Views
             if (uc != null)
             {
                 retVal = uc.Left;
+                return retVal;
             }
+            retVal = this.NativeViewControl.Top;
             return retVal;
         }
 
@@ -156,7 +156,9 @@ namespace Griasdi.Mvvms.Views
             if (uc != null)
             {
                 retVal = uc.Width;
+                return retVal;
             }
+            retVal = this.NativeViewControl.Width;
             return retVal;
         }
 
@@ -167,10 +169,11 @@ namespace Griasdi.Mvvms.Views
             if (uc != null)
             {
                 retVal = uc.Height;
+                return retVal;
             }
+            retVal = this.NativeViewControl.Height;
             return retVal;
         }
-       
 
 
     }

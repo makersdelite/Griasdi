@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Griasdi.Mvvms.Views.Edits.PRIMITIVES;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,10 @@ namespace Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES
         
         public virtual void SetValue(string value)
         {
+        }
 
+        public virtual void SetCaption(string value)
+        {
         }
     }
 }

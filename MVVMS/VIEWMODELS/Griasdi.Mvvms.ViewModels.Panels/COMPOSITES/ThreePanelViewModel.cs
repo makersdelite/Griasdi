@@ -44,7 +44,10 @@ namespace Griasdi.Mvvms.ViewModels.Panels.COMPOSITES
 
             this.RegisterEvents();
         }
-
+        public virtual void SetPanel0Top(int value)
+        {
+            this.Panel0.SetTop(value);
+        }
         public virtual void SetPanel0Left(int value)
         {
             this.Panel0.SetLeft(value);
@@ -52,6 +55,10 @@ namespace Griasdi.Mvvms.ViewModels.Panels.COMPOSITES
         public virtual void SetPanel0Width(int value)
         {
             this.Panel0.SetWidth(value);
+        }
+        public virtual void SetPanel0Height(int value)
+        {
+            this.Panel0.SetHeight(value);
         }
 
 
@@ -61,6 +68,11 @@ namespace Griasdi.Mvvms.ViewModels.Panels.COMPOSITES
         }
 
 
+
+        public virtual void SetPanel1Top(int value)
+        {
+            this.Panel1.SetTop(value);
+        }
         public virtual void SetPanel1Left(int value)
         {
             this.Panel1.SetLeft(value);
@@ -69,12 +81,20 @@ namespace Griasdi.Mvvms.ViewModels.Panels.COMPOSITES
         {
             this.Panel1.SetWidth(value);
         }
+        public virtual void SetPanel1Height(int value)
+        {
+            this.Panel1.SetHeight(value);
+        }
+
         public virtual void SetPanel1(ViewModelBase childVm)
         {
             this.Panel1.Add(childVm);
         }
 
-
+        public virtual void SetPanel2Top(int value)
+        {
+            this.Panel2.SetTop(value);
+        }
         public virtual void SetPanel2Left(int value)
         {
             this.Panel2.SetLeft(value);
@@ -82,6 +102,10 @@ namespace Griasdi.Mvvms.ViewModels.Panels.COMPOSITES
         public virtual void SetPanel2Width(int value)
         {
             this.Panel2.SetWidth(value);
+        }
+        public virtual void SetPanel2Height(int value)
+        {
+            this.Panel2.SetHeight(value);
         }
         public virtual void SetPanel2(ViewModelBase childVm)
         {

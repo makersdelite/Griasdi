@@ -65,5 +65,18 @@ namespace Griasdi.Mvvms.Views.NativeViews
         {
             this.Left = value;
         }
+        public virtual int GetHeight()
+        {
+            int retVal = 0;
+            retVal = this.Height;
+            return retVal;
+        }
+        public virtual int GetWidth()
+        {
+            int retVal = 0;
+            retVal = this.Width;
+            return retVal;
+        }
+
     }
 }

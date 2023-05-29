@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="COMPOSITES\LabeledDeepSingleLineEditBoxViewModel.cs" />
+    <Compile Include="COMPOSITES\LabeledSingleLineEditBoxCompositeViewModel.cs" />
     <Compile Include="EditViewControlViewModel.cs" />
     <Compile Include="EditViewModelBase.cs" />
     <Compile Include="PRIMITIVES\MultiLineEditBoxViewModel.cs" />
