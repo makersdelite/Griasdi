@@ -32,5 +32,17 @@ namespace Griasdi.Mvvms.Views.Panels.PRIMITIVES
             }
             nativeView.SetValue(value);
         }
+
+        public override void SetWidth(int value)
+        {
+
+            var nativeView = this.NativeViewControl as PanelNativeViewControl;
+            if (nativeView == null)
+            {
+                return;
+            }
+            nativeView.SetWidth(value);
+        }
+
     }
 }

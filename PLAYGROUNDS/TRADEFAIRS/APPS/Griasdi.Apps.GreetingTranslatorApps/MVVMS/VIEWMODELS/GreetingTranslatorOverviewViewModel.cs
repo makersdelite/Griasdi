@@ -26,6 +26,7 @@ namespace Griasdi.Apps.GreetingTranslatorApps.MVVMS.VIEWMODELS
         {
             var vmInfoPart = new StandardPanelViewModel();
             vmInfoPart.Build();
+            vmInfoPart.SetWidth(600);
             this.Add("INFO-PART-PANEL",vmInfoPart);
 
 
@@ -36,22 +37,22 @@ namespace Griasdi.Apps.GreetingTranslatorApps.MVVMS.VIEWMODELS
             }
             this.View = view;
 
-            var sleb0 = ViewModelFactory.GetSingleLineEditBox("GREETING-ITALIAN-EDIT-BOX","Ciao");
+            var sleb0 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-ITALIAN-EDIT-BOX","Italian","Ciao");
             vmInfoPart.Add(sleb0);
 
-            var sleb1 = ViewModelFactory.GetSingleLineEditBox("GREETING-BAVARIAN-EDIT-BOX", "Griasdi");
+            var sleb1 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-BAVARIAN-EDIT-BOX", "Bavarian, (Germany)","Griasdi");
             vmInfoPart.Add(sleb1);
 
-            var sleb2 = ViewModelFactory.GetSingleLineEditBox("GREETING-NORTHERN-DE-HAMBURG-EDIT-BOX", "Moin");
+            var sleb2 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-NORTHERN-DE-HAMBURG-EDIT-BOX","Northern Germany", "Moin");
             vmInfoPart.Add(sleb2);
 
-            var sleb3 = ViewModelFactory.GetSingleLineEditBox("GREETING-NORTHERN-DE-HAMBURG-CHATTY-EDIT-BOX", "Moin Moin");
+            var sleb3 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-NORTHERN-DE-HAMBURG-CHATTY-EDIT-BOX", "Northern Germany, chatty", "Moin Moin");
             vmInfoPart.Add(sleb3);
 
-            var sleb4 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-EN-US-EDIT-BOX", "EN-US", "Hi");
+            var sleb4 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-EN-US-EDIT-BOX", "English", "Hi");
             vmInfoPart.Add(sleb4);
 
-            var sleb5 = ViewModelFactory.GetSingleLineEditBox("GREETING-NORTHERN-DE-HAMBURG-SHORT-EMPHASIZED-EDIT-BOX", "Moooooooooin");
+            var sleb5 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-NORTHERN-DE-HAMBURG-SHORT-EMPHASIZED-EDIT-BOX","Norther Germany, emphazized", "Moooooooooin");
             vmInfoPart.Add(sleb5);
         }
 
@@ -100,7 +101,7 @@ namespace Griasdi.Apps.GreetingTranslatorApps.MVVMS.VIEWMODELS
                 var vxNative = vx.NativeViewControl;
                 vx.SetTop(vmRunningTop);
                 vx.SetLeft(10);
-                vx.SetWidth(300);
+                vx.SetWidth(600);
                 vx.SetHeight(25);
 
                 if (vm is MultiLineEditBoxViewModel)

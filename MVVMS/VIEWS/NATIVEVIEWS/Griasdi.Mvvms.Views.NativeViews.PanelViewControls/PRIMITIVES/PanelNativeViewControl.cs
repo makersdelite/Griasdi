@@ -77,7 +77,7 @@ namespace Griasdi.Mvvms.Views.NativeViews.PanelViewControls.PRIMITIVES
             base.SetHeight(value);
             this.Panel.Height = value;
         }
-                public override void SetWidth(int value)
+        public override void SetWidth(int value)
         {
             base.SetWidth(value);
             this.Panel.Width = value;

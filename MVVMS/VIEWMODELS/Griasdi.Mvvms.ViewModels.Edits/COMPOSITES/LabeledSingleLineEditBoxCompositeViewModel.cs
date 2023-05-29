@@ -45,7 +45,7 @@ namespace Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES
 
             vm.SetPanel0Top(1);
             vm.SetPanel0Left(0);
-            vm.SetPanel0Width(80);
+            vm.SetPanel0Width(200);
             vm.SetPanel0Height(22);
             vm.SetPanel0(label);
 
@@ -55,7 +55,7 @@ namespace Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES
 
             vm.SetPanel1Top(1);
             vm.SetPanel1Left(vm.Panel0.GetLeft() + vm.Panel0.GetWidth());
-            vm.SetPanel1Width(175);
+            vm.SetPanel1Width(275);
             vm.SetPanel1Height(22);
             vm.SetPanel1(editBox);
 

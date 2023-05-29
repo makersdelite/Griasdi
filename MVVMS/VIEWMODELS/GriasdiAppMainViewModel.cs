@@ -69,7 +69,7 @@ namespace GriasdiWinFormApp.MVVMS.VIEWMODELS
                 var vxNative = vx.NativeViewControl;
                 vx.SetTop(vmRunningTop);
                 vx.SetLeft(10);
-                //vxNative.SetWidth(750);
+                vx.SetWidth(600);
 
 
                 if (vm is MultiLineEditBoxViewModel)

@@ -32,5 +32,16 @@ namespace Griasdi.Mvvms.ViewModels.Panels.PRIMITIVES
             view.SetValue(value);
             
         }
+
+        public override void SetWidth(int value)
+        {
+            base.SetWidth(value);
+            var view = this.View as StandardPanelViewControl;
+            if (view == null)
+            {
+                return;
+            }
+            view.SetWidth(value);
+        }
     }
 }

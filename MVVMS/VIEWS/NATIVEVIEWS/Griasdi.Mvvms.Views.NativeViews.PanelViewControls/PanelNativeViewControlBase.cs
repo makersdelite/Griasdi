@@ -11,13 +11,13 @@ namespace Griasdi.Mvvms.Views.NativeViews.PanelViewControls
         private void InitializeComponent()
         {
             this.SuspendLayout();
-            // 
-            // PanelNativeViewControlBase
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.Name = "PanelNativeViewControlBase";
-            this.Size = new System.Drawing.Size(388, 230);
-            this.ResumeLayout(false);
+            //// 
+            //// PanelNativeViewControlBase
+            //// 
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            //this.Name = "PanelNativeViewControlBase";
+            //this.Size = new System.Drawing.Size(388, 230);
+            //this.ResumeLayout(false);
 
         }
     }
