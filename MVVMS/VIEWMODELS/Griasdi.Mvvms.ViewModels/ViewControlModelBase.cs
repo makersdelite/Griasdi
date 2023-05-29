@@ -25,6 +25,49 @@ namespace Griasdi.Mvvms.ViewModels
             view.ViewControlClicked += View_ViewControlClicked;
         }
 
+
+
+
+        public override void SetEnabled()
+        {
+            var view = this.View as ViewControlBase;
+            if (view == null)
+            {
+                return;
+            }
+            view.SetEnabled();
+        }
+        public override void SetDisabled()
+        {
+            var view = this.View as ViewControlBase;
+            if (view == null)
+            {
+                return;
+            }
+            view.SetDisabled();
+        }
+        public override void SetLocked()
+        {
+
+        }
+        public override void SetUnlocked()
+        {
+
+        }
+
+
+        public virtual void SetBorderVisible()
+        {
+
+        }
+        public virtual void SetBorderHidden()
+        {
+
+        }
+
+
+
+
         public override void SetLeft(int value)
         {
             var view = this.View as ViewControlBase;
@@ -108,6 +151,8 @@ namespace Griasdi.Mvvms.ViewModels
             return retVal;
         }
 
+
+        
 
 
 

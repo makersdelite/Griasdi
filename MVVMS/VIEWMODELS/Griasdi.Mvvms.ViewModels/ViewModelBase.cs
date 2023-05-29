@@ -49,6 +49,24 @@ namespace Griasdi.Mvvms.ViewModels
         public virtual void Show()
         {
         }
+
+        public virtual void SetEnabled()
+        {
+
+        }
+        public virtual void SetDisabled()
+        {
+
+        }
+        public virtual void SetLocked()
+        {
+
+        }
+        public virtual void SetUnlocked()
+        {
+
+        }
+
         public virtual void SetLeft(int value)
         {
         }

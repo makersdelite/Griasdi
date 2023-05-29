@@ -39,6 +39,8 @@ namespace Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES
             var label = new SingleLineEditBoxViewModel();
             label.Build();
             label.SetValue("Label");
+            label.SetLocked();
+            label.SetBorderHidden();
             this.Label = label;
 
             vm.SetPanel0Top(1);

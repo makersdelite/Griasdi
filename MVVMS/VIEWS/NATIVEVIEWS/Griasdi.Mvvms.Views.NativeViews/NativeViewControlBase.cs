@@ -49,6 +49,31 @@ namespace Griasdi.Mvvms.Views.NativeViews
         {
         }
 
+        public virtual void SetEnabled()
+        {
+            this.Enabled = true;
+        }
+        public virtual void SetDisabled()
+        {
+            this.Enabled = false;
+        }
+        public virtual void SetLocked()
+        {
+        }
+        public virtual void SetUnlocked()
+        {
+        }
+
+        public virtual void SetBorderVisible()
+        {
+            this.BorderStyle = BorderStyle.FixedSingle;
+        }
+        public virtual void SetBorderHidden()
+        {
+            this.BorderStyle = BorderStyle.None;
+        }
+
+
         public virtual void SetHeight(int value)
         {
             this.Height = value;

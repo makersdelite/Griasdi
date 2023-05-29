@@ -39,5 +39,63 @@ namespace Griasdi.Mvvms.Views.Edits.PRIMITIVES
             }
             nativeView.SetValue(value);
         }
+
+        public override void SetEnabled()
+        {
+            var nativeView = this.NativeViewControl as EditBoxNativeViewControl;
+            if (nativeView == null)
+            {
+                return;
+            }
+            nativeView.SetEnabled();
+        }
+        public override void SetDisabled()
+        {
+            var nativeView = this.NativeViewControl as EditBoxNativeViewControl;
+            if (nativeView == null)
+            {
+                return;
+            }
+            nativeView.SetDisabled();
+        }
+        public override void SetLocked()
+        {
+            var nativeView = this.NativeViewControl as EditBoxNativeViewControl;
+            if (nativeView == null)
+            {
+                return;
+            }
+            nativeView.SetLocked();
+        }
+        public override void SetUnlocked()
+        {
+            var nativeView = this.NativeViewControl as EditBoxNativeViewControl;
+            if (nativeView == null)
+            {
+                return;
+            }
+            nativeView.SetUnlocked();
+        }
+
+        public override void SetBorderVisible()
+        {
+            var nativeView = this.NativeViewControl as EditBoxNativeViewControl;
+            if (nativeView == null)
+            {
+                return;
+            }
+            nativeView.SetBorderVisible();
+        }
+
+        public override void SetBorderHidden()
+        {
+            var nativeView = this.NativeViewControl as EditBoxNativeViewControl;
+            if (nativeView == null)
+            {
+                return;
+            }
+            nativeView.SetBorderHidden();
+        }
+
     }
 }

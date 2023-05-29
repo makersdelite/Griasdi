@@ -29,7 +29,62 @@ namespace Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES
                 return;
             }
             view.SetValue(value);
-            
+        }
+
+        public override void SetLocked()
+        {
+            var view = this.View as SingleLineEditBoxViewControl;
+            if (view == null)
+            {
+                return;
+            }
+            view.SetLocked();
+        }
+        public override void SetUnlocked()
+        {
+            var view = this.View as SingleLineEditBoxViewControl;
+            if (view == null)
+            {
+                return;
+            }
+            view.SetUnlocked();
+        }
+        public override void SetEnabled()
+        {
+            var view = this.View as SingleLineEditBoxViewControl;
+            if (view == null)
+            {
+                return;
+            }
+            view.SetEnabled();
+        }
+        public override void SetDisabled()
+        {
+            var view = this.View as SingleLineEditBoxViewControl;
+            if (view == null)
+            {
+                return;
+            }
+            view.SetDisabled();
+        }
+
+        public override void SetBorderVisible()
+        {
+            var view = this.View as SingleLineEditBoxViewControl;
+            if (view == null)
+            {
+                return;
+            }
+            view.SetBorderVisible();
+        }
+        public override void SetBorderHidden()
+        {
+            var view = this.View as SingleLineEditBoxViewControl;
+            if (view == null)
+            {
+                return;
+            }
+            view.SetBorderHidden();
         }
     }
 }

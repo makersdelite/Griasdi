@@ -86,6 +86,45 @@ namespace Griasdi.Mvvms.Views.NativeViews.EditViewControls
             tb.WordWrap = true;
         }
 
+
+        public override void SetEnabled()
+        {
+            base.SetEnabled();
+            this.TextBox.Enabled = true;
+        }
+        public override void SetDisabled()
+        {
+            base.SetDisabled();
+            this.TextBox.Enabled = false;
+        }
+
+        public override void SetLocked()
+        {
+            base.SetLocked();
+            this.TextBox.ReadOnly = true;
+            this.TextBox.BackColor = Color.White;
+        }
+        public override void SetUnlocked()
+        {
+            base.SetUnlocked();
+            this.TextBox.ReadOnly = false;
+        }
+
+
+        public override void SetBorderVisible()
+        {
+            base.SetBorderVisible();
+            this.TextBox.BorderStyle = BorderStyle.FixedSingle;
+        }
+        public override void SetBorderHidden()
+        {
+            base.SetBorderHidden();
+            this.TextBox.BorderStyle = BorderStyle.None;
+        }
+
+
+
+
         public override void SetTop(int value)
         {
             base.SetTop(value);

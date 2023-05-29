@@ -80,6 +80,54 @@ namespace Griasdi.Mvvms.Views
         #endregion
 
 
+        public virtual void SetEnabled()
+        {
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                uc.Enabled = true;
+                return;
+            }
+            this.NativeViewControl.Enabled = true;
+        }
+        public virtual void SetDisabled()
+        {
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                uc.Enabled = false;
+                return;
+            }
+            this.NativeViewControl.Enabled = false;
+        }
+        public virtual void SetLocked()
+        {
+        }
+        public virtual void SetUnlocked()
+        {
+        }
+
+
+        public virtual void SetBorderVisible()
+        {
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                uc.SetBorderVisible();
+                return;
+            }
+        }
+
+        public virtual void SetBorderHidden()
+        {
+            var uc = this.NativeViewControl as NativeViewControlBase;
+            if (uc != null)
+            {
+                uc.SetBorderHidden();
+                return;
+            }
+        }
+
 
         public virtual void SetHeight(int value)
         {
