@@ -1,4 +1,5 @@
 ﻿using Griasdi.Events;
+using Griasdi.Helpers.ProcessHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,8 @@ namespace Griasdi.Mvvms.ViewModels.Edits.COMPOSITES
 
         private void Button_ViewModelClicked(object sender, GriasdiEventArgs e)
         {
-            MessageBox.Show(this.EditBox.GetValue());
+            var url = this.EditBox.GetValue();
+            ProcessHelper.OpenUrlWithEdgeBrowser(url);
         }
 
        

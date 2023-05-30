@@ -61,6 +61,10 @@
       <Project>{12DFF439-EE6A-4626-A187-ECB985392ED9}</Project>
       <Name>Griasdi.Events</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\HELPERS\Griasdi.Helpers.ProcessHelpers\Griasdi.Helpers.ProcessHelpers.csproj">
+      <Project>{2da6f482-1430-4f55-94d7-d0349e08381d}</Project>
+      <Name>Griasdi.Helpers.ProcessHelpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\VIEWS\Griasdi.Mvvms.Views.Buttons\Griasdi.Mvvms.Views.Buttons.csproj">
       <Project>{b0291fcd-c34f-44ca-a18d-7ebf3dff520d}</Project>
       <Name>Griasdi.Mvvms.Views.Buttons</Name>
