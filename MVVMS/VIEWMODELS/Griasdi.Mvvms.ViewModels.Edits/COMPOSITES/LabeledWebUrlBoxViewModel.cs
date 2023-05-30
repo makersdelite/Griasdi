@@ -20,7 +20,6 @@ namespace Griasdi.Mvvms.ViewModels.Edits.COMPOSITES
             base.Build();
             this.Button.SetValue("Go");
             this.Button.ViewModelClicked += this.Button_ViewModelClicked;
-
         }
 
         private void Button_ViewModelClicked(object sender, GriasdiEventArgs e)

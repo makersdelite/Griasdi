@@ -25,10 +25,10 @@ namespace Griasdi.Helpers.ProcessHelpers
             try
             {
                 Process p = new Process();
-                var argumentsPattern = @"--new-window ###url###";
-                var argumentsFinal = argumentsPattern.Replace("###url###", url);
+                var args = @"--new-window ###weburl###";
+                var argsRefined = args.Replace("###weburl###", url);
                 p.StartInfo.FileName = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe";
-                p.StartInfo.Arguments = argumentsFinal;
+                p.StartInfo.Arguments = argsRefined;
                 p.Start();
             }
             catch (Exception ex)
