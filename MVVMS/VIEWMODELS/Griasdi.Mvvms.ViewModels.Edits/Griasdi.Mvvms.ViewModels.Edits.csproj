@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="COMPOSITES\LabeledSingleLineEditBoxCompositeViewModel.cs" />
+    <Compile Include="COMPOSITES\LabeledWebUrlBoxViewModel.cs" />
     <Compile Include="EditViewControlViewModel.cs" />
     <Compile Include="EditViewModelBase.cs" />
     <Compile Include="PRIMITIVES\MultiLineEditBoxViewModel.cs" />
@@ -55,6 +56,10 @@
     <ProjectReference Include="..\..\..\COMMONS\Griasdi.Commons\Griasdi.Commons.csproj">
       <Project>{cabbd549-d234-451c-946c-5a4a5990d61a}</Project>
       <Name>Griasdi.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\EVENTS\Griasdi.Events\Griasdi.Events.csproj">
+      <Project>{12DFF439-EE6A-4626-A187-ECB985392ED9}</Project>
+      <Name>Griasdi.Events</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\VIEWS\Griasdi.Mvvms.Views.Buttons\Griasdi.Mvvms.Views.Buttons.csproj">
       <Project>{b0291fcd-c34f-44ca-a18d-7ebf3dff520d}</Project>

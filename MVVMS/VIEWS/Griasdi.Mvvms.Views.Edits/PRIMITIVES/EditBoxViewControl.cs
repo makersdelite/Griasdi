@@ -39,6 +39,17 @@ namespace Griasdi.Mvvms.Views.Edits.PRIMITIVES
             }
             nativeView.SetValue(value);
         }
+        public virtual string GetValue()
+        {
+            string retVal = null;
+            var nativeView = this.NativeViewControl as EditBoxNativeViewControl;
+            if (nativeView == null)
+            {
+                return retVal;
+            }
+            retVal = nativeView.GetValue();
+            return retVal;
+        }
 
         public override void SetEnabled()
         {

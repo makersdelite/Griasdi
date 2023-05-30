@@ -17,6 +17,11 @@ namespace Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES
         {
         }
 
+        public virtual string GetValue()
+        {
+            string retVal = null;
+            return retVal;
+        }
         public virtual void SetCaption(string value)
         {
         }

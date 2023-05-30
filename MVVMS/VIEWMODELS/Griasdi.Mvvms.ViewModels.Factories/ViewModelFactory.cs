@@ -1,5 +1,6 @@
 ﻿using Griasdi.Events;
 using Griasdi.Mvvms.ViewModels.Buttons.PRIMITIVES;
+using Griasdi.Mvvms.ViewModels.Edits.COMPOSITES;
 using Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,9 @@ namespace Griasdi.Mvvms.ViewModels.Factories
                     break;
                 case "LABELED-DEEP-SINGLE-LINE-EDIT-BOX":
                     retVal = new LabeledSingleLineEditBoxCompositeViewModel();
+                    break;
+                case "LABELED-WEB-URL-BOX":
+                    retVal = new LabeledWebUrlBoxViewModel();
                     break;
 
                 default:
@@ -157,6 +161,30 @@ namespace Griasdi.Mvvms.ViewModels.Factories
             retVal = vm;
             return retVal;
         }
+
+
+        public static EditBoxViewModel GetWebUrlBox(string name, string caption, string value)
+        {
+            EditBoxViewModel retVal = null;
+            #region method exit strategy
+            if (name == null)
+            {
+                return retVal;
+            }
+            if (name.Trim().Length == 0)
+            {
+                return retVal;
+            }
+            #endregion
+            var vm = ViewModelFactory.Get("LABELED-WEB-URL-BOX") as EditBoxViewModel;
+            vm.Name = name.Trim().ToUpper();
+            vm.SetCaption(caption);
+            vm.SetValue(value);
+            retVal = vm;
+            return retVal;
+        }
+
+
         #endregion
     }
 }

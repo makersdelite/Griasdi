@@ -37,23 +37,23 @@ namespace Griasdi.Apps.GreetingTranslatorApps.MVVMS.VIEWMODELS
             }
             this.View = view;
 
-            var sleb0 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-ITALIAN-EDIT-BOX","Italian","Ciao");
-            vmInfoPart.Add(sleb0);
-
-            var sleb1 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-BAVARIAN-EDIT-BOX", "Bavarian, (Germany)","Griasdi");
-            vmInfoPart.Add(sleb1);
-
-            var sleb2 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-NORTHERN-DE-HAMBURG-EDIT-BOX","Northern Germany", "Moin");
-            vmInfoPart.Add(sleb2);
-
-            var sleb3 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-NORTHERN-DE-HAMBURG-CHATTY-EDIT-BOX", "Northern Germany, chatty", "Moin Moin");
-            vmInfoPart.Add(sleb3);
-
             var sleb4 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-EN-US-EDIT-BOX", "English", "Hi");
             vmInfoPart.Add(sleb4);
 
-            var sleb5 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-NORTHERN-DE-HAMBURG-SHORT-EMPHASIZED-EDIT-BOX","Norther Germany, emphazized", "Moooooooooin");
-            vmInfoPart.Add(sleb5);
+            var sleb0 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-ITALIAN-EDIT-BOX","Italian","Ciao");
+            vmInfoPart.Add(sleb0);
+
+            var sleb1 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-BAVARIAN-EDIT-BOX", "Germany, Southern, Bavarian","Griasdi");
+            vmInfoPart.Add(sleb1);
+
+            var sleb2 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-NORTHERN-DE-HAMBURG-EDIT-BOX","Germany, Northern, e.g. Hamburg", "Moin");
+            vmInfoPart.Add(sleb2);
+
+            var sleb3 = ViewModelFactory.GetLabeledSingleLineEditBoxComposite("GREETING-NORTHERN-DE-HAMBURG-CHATTY-EDIT-BOX", "Germany, Northern, chatty style", "Moin Moin");
+            vmInfoPart.Add(sleb3);
+
+            var webBox0 = ViewModelFactory.GetWebUrlBox("WEB-URL-WIKI-ENGLISH-LANGUAGE", "Wikipedia about english language", "https://en.wikipedia.org/wiki/English_language");
+            vmInfoPart.Add(webBox0);
         }
 
         public override void Render()

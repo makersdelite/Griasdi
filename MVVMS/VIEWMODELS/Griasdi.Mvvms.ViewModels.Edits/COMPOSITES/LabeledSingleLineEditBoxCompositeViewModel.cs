@@ -1,4 +1,5 @@
 ﻿using Griasdi.Mvvms.ViewModels.Buttons.PRIMITIVES;
+using Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES;
 using Griasdi.Mvvms.ViewModels.Panels.COMPOSITES;
 using Griasdi.Mvvms.ViewModels.Panels.PRIMITIVES;
 using Griasdi.Mvvms.Views;
@@ -14,7 +15,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES
+namespace Griasdi.Mvvms.ViewModels.Edits.COMPOSITES
 {
     public class LabeledSingleLineEditBoxCompositeViewModel : EditBoxViewModel
     {

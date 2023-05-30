@@ -31,6 +31,18 @@ namespace Griasdi.Mvvms.ViewModels.Edits.PRIMITIVES
             view.SetValue(value);
         }
 
+        public override string GetValue()
+        {
+            string retVal = null;
+            var view = this.View as SingleLineEditBoxViewControl;
+            if (view == null)
+            {
+                return retVal;
+            }
+            retVal = view.GetValue();
+            return retVal;
+        }
+
         public override void SetLocked()
         {
             var view = this.View as SingleLineEditBoxViewControl;
